@@ -1,0 +1,6 @@
+[submodule "kyocera-ky-42c-unlock"]
+	path = kyocera-ky-42c-unlock
+	url = ./kyocera-ky-42c-unlock/
+[submodule "momo-utils-py"]
+	path = momo-utils-py
+	url = ./momo-utils-py/
