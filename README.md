@@ -15,6 +15,7 @@ You could also run `Set-ExecutionPolicy Unrestricted` but this is considered les
 > [!NOTE]
 > This script downloads binary files from GitHub automatically. If you don't want this to happen, comment out all lines starting with `Invoke-WebRequest`. 
 
+* Download this project with `git clone https://github.com/unbreadedbread/ky42c-root-utility.git --recursive`. If you would rather use the GitHub CLI, run `gh repo clone unbreadedbread/ky42c-root-utility --recursive`
 * Run `./ky42c-utility.ps1 -setup -unlock`. Power off your phone, and plug it in. Be sure you have the MTK USB drivers. This will unlock the bootloader.
 * Then, run `./ky42c-utility.ps1 -backup`. Put the boot.img file in the `backups` directory it creates through Magisk on the phone. Copy it back to your computer. You may have to turn off your phone during this step (I'm not sure)
 * To flash this new image, `adb reboot bootloader` then `fastboot flash boot PATH/TO/BOOT.IMG`. (the phone is now rooted at this stage)
