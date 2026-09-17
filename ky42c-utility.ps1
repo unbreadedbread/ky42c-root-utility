@@ -15,14 +15,14 @@ if ($setup) {
     Move-Item ./lib/utils.py ./lib/utils.old
     Copy-Item ../momo-utils-py/utils.py ./lib/utils.py
     Set-Location ..
-    # download penumbra/antumbra
+    # download penumbra/antumbra, comment these lines if you'd like to manually download these files.
     Invoke-WebRequest https://github.com/shomykohai/penumbra/releases/download/v1.1.0/antumbra.exe -OutFile ./antumbra.exe
     # download MTK DA from mtkclient repo
     Invoke-WebRequest https://github.com/bkerler/mtkclient/raw/refs/heads/main/mtkclient/Loader/MTK_DA_V5.bin -OutFile ./MTK_DA_V5.bin
 }
 
 if ($unlock) {
-    Write-Output "Power off your phone and plug it in. It should reboot with 'Orange State' message."
+    Write-Output "Power off your phone and plug it in. It should reboot with an 'Orange State' message."
     python kyocera-ky-42c-unlock/main.py unlock
 }
 
